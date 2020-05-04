@@ -1,0 +1,33 @@
+T=int(input())
+X=[]
+Y=[]
+L=[]
+count=1    
+if(1<=T<=10):
+    for z in range(1,T+1):
+        n,q=input().split()
+        n=int(n)
+        A=[int(i)for i in input().split()][:n]
+        q=int(q)
+        if(1<=q<=100000):
+            for i in range(q):
+                x,y=input().split()
+                x=int(x)
+                y=int(y)
+                if(1<=q<=100000):
+                    if(1<=q<=100000):
+                        X.append(x)
+                        Y.append(y)
+            print('case',z,':')
+            for i in range(q):
+                for j in A:
+                    if(j==X[i]):
+                        index=A.index(j)
+                        A[index]=Y[i]
+                s=0
+                l=[]
+                for j in range(1,n):
+                    s=s+abs(int(A[j-1])-int(A[j]))
+                    j=j+1
+                i=i+1
+                print(s)
